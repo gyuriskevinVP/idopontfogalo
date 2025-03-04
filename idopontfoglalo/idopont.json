@@ -1,0 +1,35 @@
+{
+    "idopont": [
+      {
+        "id": "1",
+        "szolgaltatas": "fodrász",
+        "nap": "hétfő",
+        "óra": 8
+      },
+      {
+        "id": "2",
+        "szolgaltatas": "fodrász",
+        "nap": "hétfő",
+        "óra": 10
+      },
+      {
+        "id": "3",
+        "szolgaltatas": "tetováló",
+        "nap": "péntek",
+        "óra": 15
+      },
+      {
+        "id": "4",
+        "szolgaltatas": "műkörmös",
+        "nap": "hétfő",
+        "óra": 8
+      },
+      {
+        "id": "5",
+        "szolgaltatas": "orvos",
+        "nap": "szerda",
+        "óra": 13
+      }
+      
+    ]
+  }
