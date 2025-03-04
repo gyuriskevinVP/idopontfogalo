@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <div class="container w-100 h-max text-center">
     <h1>Foglalj időpontot</h1>
@@ -22,9 +19,10 @@
     <option v-for="day in days" value="{{ day.value }}">{{ day.label }}</option>
   </select>
 
-  <!-- Time Picker (Hours & Minutes) -->
   <label class="p-2">Select Time:</label>
-  <input>
+  <select v-model = "availableHours" name="szolgaltatas" id="szolgaltatas">
+        <option v-for="available in availableHours"  value= "{{ available.value }}">{{ available.label }}</option>
+      </select>
 </div>
   </div>
 </form>
@@ -33,8 +31,16 @@
 
 
 <script setup>
+import { ref, computed, onMounted } from "vue";
+import { useIdopontStore } from "@/stores/idopont.js";
 
-import {ref} from 'vue'
+const idopont = useIdopontStore();
+const bookedTimes = ref([]);
+
+onMounted(async () => {
+  await idopont.LoadIdopont(); 
+  bookedTimes.value = idopont.bookedTimes; // Assuming `bookedTimes` is fetched from store
+});
 
 const selectionOptions = [
   { value: "Fodrász", label: "Fodrász" },
@@ -47,11 +53,20 @@ const selectionOptions = [
 ];
 
 const days = [
-  {value: "Hétfő", label: "Hétfő"},
-  {value: "Kedd", label: "Kedd"},
-  {value: "Szerda", label: "Szerda"},
-  {value: "Csütörtök", label: "Csütörtök"},
-  {value: "Péntek", label: "Péntek"},
-]
+  { value: "Hétfő", label: "Hétfő" },
+  { value: "Kedd", label: "Kedd" },
+  { value: "Szerda", label: "Szerda" },
+  { value: "Csütörtök", label: "Csütörtök" },
+  { value: "Péntek", label: "Péntek" },
+];
 
+// Generate available hours from 08:00 to 16:00
+const availableHours = computed(() => {
+  const allHours = [];
+  for (let i = 8; i < 16; i++) {
+    allHours.push(`${i}:00`);
+    allHours.push(`${i}:30`);
+  }
+  return allHours.filter(hour => !bookedTimes.value.includes(hour));
+});
 </script>
