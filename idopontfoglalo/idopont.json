@@ -1,35 +1,58 @@
 {
-    "idopont": [
-      {
-        "id": "1",
-        "szolgaltatas": "fodrász",
-        "nap": "hétfő",
-        "ora": 8
-      },
-      {
-        "id": "2",
-        "szolgaltatas": "fodrász",
-        "nap": "hétfő",
-        "ora": 10
-      },
-      {
-        "id": "3",
-        "szolgaltatas": "tetováló",
-        "nap": "péntek",
-        "ora": 15
-      },
-      {
-        "id": "4",
-        "szolgaltatas": "műkörmös",
-        "nap": "hétfő",
-        "ora": 8
-      },
-      {
-        "id": "5",
-        "szolgaltatas": "orvos",
-        "nap": "szerda",
-        "ora": 13
-      }
-      
-    ]
-  }
+  "idopont": [
+    {
+      "id": "1",
+      "szolgaltatas": "fodrász",
+      "nap": "hétfő",
+      "ora": 8
+    },
+    {
+      "id": "2",
+      "szolgaltatas": "fodrász",
+      "nap": "hétfő",
+      "ora": 10
+    },
+    {
+      "id": "3",
+      "szolgaltatas": "tetováló",
+      "nap": "péntek",
+      "ora": 15
+    },
+    {
+      "id": "4",
+      "szolgaltatas": "műkörmös",
+      "nap": "hétfő",
+      "ora": 8
+    },
+    {
+      "id": "5",
+      "szolgaltatas": "orvos",
+      "nap": "szerda",
+      "ora": 13
+    },
+    {
+      "id": "ffb7",
+      "szolgaltatas": "fodrász",
+      "nap": "hétfő",
+      "ora": 11,
+      "email": "szt3gyukev@vasvari.org",
+      "telefon": "123213123"
+    },
+    {
+      "id": "ae2e",
+      "szolgaltatas": "fodrász",
+      "nap": "hétfő",
+      "ora": 9,
+      "email": "szt3gyukev@vasvari.org",
+      "telefon": "asdasdasd"
+    },
+    {
+      "id": "2dae",
+      "szolgaltatas": "tetováló",
+      "nap": "péntek",
+      "ora": 8,
+      "email": "szt3gyukev@vasvari.org",
+      "telefon": "321123123123"
+    }
+  ]
+}
