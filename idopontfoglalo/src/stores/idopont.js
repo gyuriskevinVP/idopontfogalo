@@ -22,7 +22,7 @@ export const useIdopontStore = defineStore("idopont", () => {
       isLoading.value = false;
       return idopontok.value;
     } catch (error) {
-      console.error("Failed to load appointments:", error);
+      console.error("Nem sikeruült betölteni az időpontokat:", error);
       toast.error("Nem sikerült betölteni az időpontokat");
       isLoading.value = false;
       return [];

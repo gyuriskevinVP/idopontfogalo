@@ -64,6 +64,7 @@
                   class="btn btn-outline-light btn-sm"
                   @click="proceedToBooking"
                   :disabled="!isSelectionComplete"
+                  id="foglalas"
                 >
                   Tovább a foglaláshoz
                 </button>
